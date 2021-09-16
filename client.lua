@@ -77,7 +77,7 @@ RegisterNetEvent('handcuff:c:checkNearbyToBack')
 AddEventHandler('handcuff:c:checkNearbyToBack', function()
 	local closetP, closetD = GetClosestPlayer()
 	if closetP == -1 or closetD > 1.0 then
-		print("Yakında birisi yok")
+		print("There's no one nearby")
 	else
 		TriggerServerEvent("handcuff:s:back", GetPlayerServerId(closetP))
 		TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 4.5, 'ziptie', 1.0)
@@ -89,7 +89,7 @@ RegisterNetEvent('handcuff:c:checkNearbyToFront')
 AddEventHandler('handcuff:c:checkNearbyToFront', function()
 	local closetP, closetD = GetClosestPlayer()
 	if closetP == -1 or closetD > 1.0 then
-		print("Yakında birisi yok")
+		print("There's no one nearby")
 	else
 		TriggerServerEvent("handcuff:s:front", GetPlayerServerId(closetP))
 		TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 4.5, 'ziptie', 1.0)
@@ -101,7 +101,8 @@ RegisterNetEvent('handcuff:c:checkNearbyToFree')
 AddEventHandler('handcuff:c:checkNearbyToFree', function()
 	local closetP, closetD = GetClosestPlayer()
 	if closetP == -1 or closetD > 1.0 then
-		print("Yakında birisi yok")
+		print("There's no one nearby
+				")
 	else
 		TriggerServerEvent("handcuff:s:free", GetPlayerServerId(closetP))
 		TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 4.5, 'ziptie', 1.0)
